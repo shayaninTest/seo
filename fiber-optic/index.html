@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIR and Optical Fiber</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Mitr"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/latin-modern-math"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/diagramatics@1.5/css/diagramatics.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        จากหลักฟิสิกส์ ม.ปลาย สู่เทคโนโลยีเบื้องหลังอินเทอร์เน็ตความเร็วสูง |
+        เรียนรู้ผ่านบทเรียน Interactive
+      </h1>
+    </header>
+    <article>
+      <div class="box">
+        <p>
+          เคยสงสัยกันไหมครับว่า หลักฟิสิกส์พื้น ๆ ที่เราเรียนกันตอนมัธยม
+          จะสามารถนำมาใช้เป็นเทคโนโลยีเปลี่ยนโลกได้อย่างไร
+          วันนี้เราจะมาพูดถึงฟิสิกส์ของแสง
+          และพาทุกคนไปดูกันว่าสิ่งนี้ถูกนำไปใช้กับอินเทอร์เน็ตความเร็วสูง
+          หัวใจของการติดต่อสื่อสารข้อมูลในโลกยุคใหม่ได้อย่างไร
+        </p>
+      </div>
+      <div class="box">
+        <h2>
+          เกิดอะไรขึ้นเมื่อแสงเคลื่อนที่เปลี่ยนตัวกลาง : หลักการหักเหและสะท้อน
+        </h2>
+        <p>
+          เรื่องราวของเราเริ่มต้นที่หลักฟิสิกส์ง่าย ๆ
+          ที่เกิดเมื่อแสงเดินทางมาเจอแนวรอยต่อระหว่างตัวกลาง เช่น
+          แสงจากอากาศถูกยิงลงมาที่ผิวแก้ว
+        </p>
+        <h3>ลองยิงแสงลงไปด้วยมุมยิงต่าง ๆ ดูนะ</h3>
+        <div class="diagram">
+          <svg class="svg" id="diagram1"></svg>
+          <div class="control" id="control1"></div>
+        </div>
+      </div>
+      <div class="box">
+        <p>
+          จะเห็นว่าบางส่วนของแสงจะ "หักเห" ผ่านเข้าไปในแก้ว ในขณะที่บางส่วนจะ
+          "สะท้อน" กลับออกมาสู่อากาศ และถ้าเราลองปรับมุมที่ยิงแสงไปตกกระทบดู
+          จะพบว่าเมื่อมุมเปลี่ยน
+          ปริมาณของแสงส่วนที่หักเหและสะท้อนก็จะเปลี่ยนไปด้วย
+          (สังเกตได้จากความเข้มของแสง) <br /><br />
+          ตรงนี้น้อง ๆ
+          ที่เรียนฟิสิกส์ก็จะได้เรียนเกี่ยวกับหลักการหักเหและสะท้อนว่า <br />
+          การหักเห : มุมตกกระทบและมุมหักเหจะเป็นไปตามกฎของ Snell <br />
+          การสะท้อน : มุมตกกระทบและมุมสะท้อนจะมีขนาดเท่ากัน
+        </p>
+      </div>
+      <div class="box">
+        <h2>เมื่อแสงถูกกักขังไว้ในแก้ว : การสะท้อนกลับหมดของแสง</h2>
+        <p>
+          ความน่าสนใจของเรื่องนี้จะเกิดขึ้นเมื่อเราเปลี่ยนให้แสงถูกยิงขึ้นมาจากแก้ว
+          ออกสู่อากาศแทน
+        </p>
+        <h3>ลองยิงแสงด้วยมุมยิงต่าง ๆ ดูอีกครั้งนะครับ</h3>
+        <div class="diagram">
+          <svg class="svg" id="diagram2"></svg>
+          <div class="control" id="control2"></div>
+        </div>
+        <p>
+          คราวนี้จะเห็นว่าเมื่อปรับมุมตกกระทบไปเรื่อย ๆ
+          จะมีบางช่วงที่ไม่มีแสงส่วนใดหักเหออกมาสู่อากาศได้เลย
+          และแสงทั้งหมดจะสะท้อนกลับเข้าไปในแก้ว เหตุการณ์แบบนี้เรียกว่า
+          <b>การสะท้อนกลับหมดภายใน</b> <br /><br />
+          ตรงนี้น้อง ๆ ที่เรียนฟิสิกส์ก็จะต้องรู้เพิ่มเติมอีกนิดนึงครับ
+          ว่ามุมตกกระทบที่เริ่มทำให้แสงเกิดการสะท้อนกลับหมด
+          จะเป็นมุมตกกระทบที่ทำให้มุมหักเหเป็น 90 องศาพอดี
+          และเราเรียกมุมตกกระทบนี้ว่า
+          <b>มุมวิกฤต</b>
+          ถ้ายิงแสงด้วยมุมมากกว่านี้ก็จะเกิดการสะท้อนกลับหมดอย่างแน่นอน
+        </p>
+        <h3>อ่านอย่างเดียวอาจจะงง ลองทดสอบกับ Interactive Diagram นี้ดูครับ</h3>
+        <div class="diagram">
+          <svg class="svg" id="diagram3"></svg>
+          <div class="control" id="control3"></div>
+        </div>
+      </div>
+      <div class="box">
+        <h2>เส้นเลือดหลักของโลกยุคข้อมูลข่าวสาร : เทคโนโลยี Fiber Optic</h2>
+        <p>
+          หลังจากปวดหัวกับทฤษฎีทางฟิสิกส์ไปแล้ว ก็ได้เวลาเก็บเกี่ยวผลที่ได้
+          และมาสนุกกับเทคโนโลยีของโลกสมัยใหม่กันครับ
+          เรื่องราวก็คือหลังจากที่มนุษย์รู้แล้วว่าเราสามารถ "กักเก็บ"
+          แสงเอาไว้ในแก้วได้
+          ก็เกิดไอเดียว่าถ้าเราสามารถเชื่อมต่อสถานที่ที่ห่างไกลกันด้วยแก้วเส้นบาง
+          ๆ ได้ล่ะ
+          เราก็สามารถส่งสัญญาณแสงผ่านเส้นแก้วนี้เพื่อรับส่งข้อมูลระหว่างกันได้
+        </p>
+        <div class="diagram">
+          <svg class="svgFiber" id="diagram4"></svg>
+          <div class="control" id="control4"></div>
+        </div>
+        <img
+          src="./images/Submarine_cable_cross-section_3D_plain-01.png"
+          alt="Fiber Optic Cable"
+          style="width: 70%; height: auto; margin-top: -20%"
+        />
+        <p>
+          จะเห็นได้ว่าสัญญาณแสงจะเคลื่อนที่ไปตามเส้นแก้ว
+          และเมื่อแสงเคลื่อนที่ไปเจอกับผิวของเส้นแก้ว ก็จะเกิดการสะท้อนกลับหมด
+          ทำให้แสงไม่รั่วไหลออกมาภายนอกเลย
+          ซึ่งก็เป็นหน้าที่ของวิศวกรที่จะต้องแน่ใจว่ามุมตกกระทบของแสงมีค่ามากกว่ามุมวิกฤตในระหว่างการใช้งานนั่นเองครับ
+        </p>
+        <p>
+          มาถึงตรงนี้หลาย ๆ คนคงเริ่มนึกออกกันแล้วว่าเส้นแก้วนี้ก็คือเทคโนโลยี
+          Fiber Optic ที่หลาย ๆ บ้านใช้เชื่อมต่ออินเทอร์เน็ตกันนั่นเอง
+          แต่รู้กันไหมว่านอกจากสาย Fiber Optic สั้น ๆ ที่เห็นกันตามบ้านแล้ว สาย
+          Fiber Optic ยังถูกใช้เชื่อมต่อระหว่างทวีปต่าง ๆ บนโลก
+          โยงใยกันเป็นเครื่องข่ายซับซ้อนข้ามมหาสมุทร
+          คอยรับส่งข้อมูลจากซีกโลกหนึ่งไปยังอีกซีกโลกหนึ่งได้ภายในไม่กี่อึดใจ
+          เรียกได้ว่าเป็นเส้นเลือดที่คอยหล่อเลี้ยงโลกทั้งใบไว้ด้วยข้อมูลปริมาณมหาศาลในทุก
+          ๆ วินาทีเลยนั่นเอง
+        </p>
+        <img
+          src="./images/cablemap-01.png"
+          alt="Fiber Optic Cable Map"
+          style="width: 100%; height: auto"
+        />
+        <p>
+          ดังนั้นครั้งต่อไปที่เราส่งข้อความหาใครสักคน หรือสั่งให้ AI
+          ช่วยทำการบ้าน ก็มั่นใจได้เลยว่ากำลังมีสัญญาณแสงเล็ก ๆ
+          ส่งผ่านเส้นแก้วเหล่านี้เป็นระยะทางไกลลิบ
+          เพื่อส่งข้อมูลที่ต้องการออกไปให้เราครับ
+        </p>
+      </div>
+      <div class="box">
+        <p>
+          แหล่งที่มารูปภาพ :<br />
+          [1] optical cable by Oona Räisänen, 9 August 2007. (Public Domain)<br />
+          [2] cable data by Greg Mahlknecht, map by Openstreetmap contributors
+          (Open Database License/CC-BY-SA 2.0), 21 July 2015.<br />
+          [3] AI generated by Imagen, 25 August 2025
+        </p>
+      </div>
+    </article>
+  </body>
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ["$", "$"],
+          ["\\(", "\\)"],
+        ],
+      },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <script type="module">
+    import * as dg from "https://cdn.jsdelivr.net/npm/diagramatics@latest/dist/diagramatics.js";
+
+    // handle MathJax
+    let handletex = (str, conf) => {
+      return MathJax.tex2svg(str, conf).innerHTML;
+    };
+
+    // define the `draw` function
+    let draw = (svgElement, ...diagrams) => {
+      dg.draw_to_svg(svgElement, dg.diagram_combine(...diagrams));
+    };
+
+    // shared parameters
+    let radius = 0.4;
+    let glassRefracIndex = 1.5;
+    let airRefracIndex = 1;
+
+    // shared diagram components
+    let glass = dg
+      .rectangle(1, 0.5)
+      .stroke("none")
+      .fill("#aec7e866")
+      .position(dg.V2(0, -0.25));
+    let air = dg
+      .rectangle(1, 0.5)
+      .stroke("none")
+      .fill("white")
+      .position(dg.V2(0, 0.25));
+    let boundary = dg
+      .line(dg.V2(-0.5, 0), dg.V2(0.5, 0))
+      .strokewidth(1)
+      .stroke("black");
+    let sceneStatic = dg.diagram_combine(glass, air, boundary);
+    let normalLine = dg
+      .line(dg.V2(0, 0.38), dg.V2(0, -0.45))
+      .strokedasharray([10, 14])
+      .strokewidth(1);
+    let incidentRay = dg
+      .line(dg.V2(0, 0), dg.V2(0, -radius))
+      .strokewidth(4)
+      .stroke("orange");
+    let refracRay = dg
+      .arrow1(dg.V2(0, 0), dg.V2(0, radius), 0.02)
+      .strokewidth(4)
+      .stroke("orange")
+      .fill("orange");
+    let reflecRay = dg
+      .arrow1(dg.V2(0, 0), dg.V2(0, -radius), 0.02)
+      .strokewidth(4)
+      .stroke("orange")
+      .fill("orange");
+    let laserPointerBody = dg
+      .rectangle(0.05, 0.12)
+      .fill("white")
+      .apply(dg.mod.round_corner(0.01));
+    let laserPointerEmitter = dg
+      .rectangle(0.025, 0.018)
+      .fill("black")
+      .position(dg.V2(0, 0.06));
+    let laserPointer = dg
+      .diagram_combine(laserPointerEmitter, laserPointerBody)
+      .move_origin(dg.V2(0, 0));
+    let generateTrack = (startAngle, endAngle, nSteps, targetAngle, radius) => {
+      let points = [];
+      let targetIsAdded = false;
+      for (let i = 0; i <= nSteps; i++) {
+        let currentAngle = startAngle + (i * (endAngle - startAngle)) / nSteps;
+        if (currentAngle > targetAngle && targetIsAdded == false) {
+          points.push(
+            dg.V2(
+              radius * Math.cos(targetAngle),
+              radius * Math.sin(targetAngle)
+            )
+          );
+          targetIsAdded = true;
+        }
+        points.push(
+          dg.V2(
+            radius * Math.cos(currentAngle),
+            radius * Math.sin(currentAngle)
+          )
+        );
+      }
+      return dg.curve(points);
+    };
+    let glassTrack = generateTrack(
+      1.0005 * Math.PI,
+      1.4995 * Math.PI,
+      120,
+      dg.to_radian(270 - 41.81),
+      radius
+    );
+    let airTrack = generateTrack(
+      0.5005 * Math.PI,
+      0.9995 * Math.PI,
+      120,
+      0.75 * Math.PI,
+      radius
+    );
+    let airTrackLimited = generateTrack(
+      0.6005 * Math.PI,
+      0.97 * Math.PI,
+      120,
+      0.9 * Math.PI,
+      radius
+    );
+    let refracLabel = dg
+      .text("หักเห")
+      .fontsize("18")
+      .move_origin(dg.V2(-0.2, -0.03))
+      .position(dg.V2(0, 0));
+    let reflecLabel = dg
+      .text("สะท้อน")
+      .fontsize("18")
+      .move_origin(dg.V2(-0.2, -0.03))
+      .position(dg.V2(0, 0));
+    let tirAlert = dg
+      .text("สะท้อนกลับหมด !!! แสงถูกขังไว้ในแก้ว")
+      .fontsize("18")
+      .textfill("red")
+      .position(dg.V2(0, 0.44));
+    let critLabel = dg
+      .text("มุมวิกฤต")
+      .fontsize("18")
+      .textfill("red")
+      .position(dg.V2(-0.08, -0.16));
+
+    // --------------------- diagram 1 ------------------------- //
+    let diagram1 = document.getElementById("diagram1");
+    let control1 = document.getElementById("control1");
+    let interactive1 = new dg.Interactive(control1, diagram1);
+    interactive1.draw_function = (inp) => {
+      let p = inp["p"];
+      // snell's law calculation
+      let incidentAngle = Math.atan2(-p.x, p.y);
+      let refracAngle = Math.asin(
+        Math.sin(incidentAngle) * (airRefracIndex / glassRefracIndex)
+      );
+      // fresnel calculation assuming laser light is S-polarized relative to the plane of incident
+      let reflectance = Math.pow(
+        (airRefracIndex * Math.cos(incidentAngle) -
+          glassRefracIndex * Math.cos(refracAngle)) /
+          (airRefracIndex * Math.cos(incidentAngle) +
+            glassRefracIndex * Math.cos(refracAngle)),
+        2
+      );
+      let transmittance = 1 - reflectance;
+      // draw the diagram
+      draw(
+        diagram1,
+        sceneStatic,
+        incidentRay.rotate(Math.PI + incidentAngle),
+        refracRay.rotate(Math.PI + refracAngle).opacity(transmittance),
+        reflecRay.rotate(Math.PI - incidentAngle).opacity(reflectance),
+        laserPointer.position(p).rotate(Math.PI + incidentAngle),
+        refracLabel
+          .rotate(-Math.PI / 2 + refracAngle)
+          .textangle(Math.PI / 2 - refracAngle),
+        reflecLabel
+          .rotate(Math.PI / 2 - incidentAngle)
+          .textangle(-Math.PI / 2 + incidentAngle)
+      );
+    };
+    interactive1.locator(
+      "p",
+      dg.V2(
+        -radius * Math.sin(dg.to_radian(65)),
+        radius * Math.cos(dg.to_radian(65))
+      ),
+      0.05,
+      "blue",
+      airTrackLimited,
+      true
+    );
+    interactive1.draw();
+    interactive1.locator_initial_draw();
+    interactive1.draw();
+
+    // --------------------- diagram 2 ------------------------- //
+    let diagram2 = document.getElementById("diagram2");
+    let control2 = document.getElementById("control2");
+    let interactive2 = new dg.Interactive(control2, diagram2);
+    interactive2.draw_function = (inp) => {
+      let p = inp["p"];
+      // snell's law calculation
+      let incidentAngle = Math.atan2(-p.x, -p.y);
+      let refracAngle = Math.asin(
+        Math.sin(incidentAngle) * (glassRefracIndex / airRefracIndex)
+      );
+      // fresnel calculation assuming laser light is S-polarized relative to the plane of incident
+      let reflectance = Math.pow(
+        (glassRefracIndex * Math.cos(incidentAngle) -
+          airRefracIndex * Math.cos(refracAngle)) /
+          (glassRefracIndex * Math.cos(incidentAngle) +
+            airRefracIndex * Math.cos(refracAngle)),
+        2
+      );
+      let transmittance = 1 - reflectance;
+      // angle annotation
+      let incidentAnno = dg.annotation
+        .angle(
+          [p, dg.V2(0, 0), dg.V2(0, -1)],
+          dg.to_degree(incidentAngle).toFixed(0).toString() + "°",
+          0.1,
+          0.06
+        )
+        .strokewidth(1);
+      let refracAnno = dg.annotation
+        .angle(
+          [
+            dg.V2(Math.sin(refracAngle), Math.cos(refracAngle)),
+            dg.V2(0, 0),
+            dg.V2(0, 1),
+          ],
+          dg.to_degree(refracAngle).toFixed(0).toString() + "°",
+          0.1,
+          0.06
+        )
+        .strokewidth(1);
+      if (Number.isNaN(refracAngle)) {
+        refracAnno = refracAnno.opacity(0);
+        tirAlert = tirAlert.opacity(1);
+      } else {
+        tirAlert = tirAlert.opacity(0);
+      }
+      // draw the diagram
+      draw(
+        diagram2,
+        sceneStatic,
+        incidentRay.rotate(-incidentAngle),
+        refracRay.rotate(-refracAngle).opacity(transmittance),
+        reflecRay.rotate(incidentAngle).opacity(reflectance),
+        laserPointer.position(p).rotate(-incidentAngle),
+        tirAlert
+      );
+    };
+    interactive2.locator(
+      "p",
+      dg.V2(
+        -radius * Math.sin(dg.to_radian(35)),
+        -radius * Math.cos(dg.to_radian(35))
+      ),
+      0.05,
+      "blue",
+      glassTrack,
+      true
+    );
+    interactive2.draw();
+    interactive2.locator_initial_draw();
+    interactive2.draw();
+
+    // --------------------- diagram 3 ------------------------- //
+    let diagram3 = document.getElementById("diagram3");
+    let control3 = document.getElementById("control3");
+    let interactive3 = new dg.Interactive(control3, diagram3);
+    interactive3.draw_function = (inp) => {
+      let p = inp["p"];
+      // snell's law calculation
+      let incidentAngle = Math.atan2(-p.x, -p.y);
+      let refracAngle = Math.asin(
+        Math.sin(incidentAngle) * (glassRefracIndex / airRefracIndex)
+      );
+      // fresnel calculation assuming laser light is S-polarized relative to the plane of incident
+      let reflectance = Math.pow(
+        (glassRefracIndex * Math.cos(incidentAngle) -
+          airRefracIndex * Math.cos(refracAngle)) /
+          (glassRefracIndex * Math.cos(incidentAngle) +
+            airRefracIndex * Math.cos(refracAngle)),
+        2
+      );
+      let transmittance = 1 - reflectance;
+      // angle annotation
+      let incidentAnno = dg.annotation
+        .angle(
+          [p, dg.V2(0, 0), dg.V2(0, -1)],
+          dg.to_degree(incidentAngle).toFixed(0).toString() + "°",
+          0.1,
+          0.06
+        )
+        .strokewidth(1);
+      let refracAnno = dg.annotation
+        .angle(
+          [
+            dg.V2(Math.sin(refracAngle), Math.cos(refracAngle)),
+            dg.V2(0, 0),
+            dg.V2(0, 1),
+          ],
+          dg.to_degree(refracAngle).toFixed(0).toString() + "°",
+          0.1,
+          0.06
+        )
+        .strokewidth(1);
+      if (Number.isNaN(refracAngle)) {
+        refracAnno = refracAnno.opacity(0);
+        tirAlert = tirAlert.opacity(1);
+      } else {
+        tirAlert = tirAlert.opacity(0);
+      }
+      if (Math.abs(incidentAngle - dg.to_radian(41.81)) < 0.0005) {
+        incidentAnno = incidentAnno.fill("red");
+        critLabel = critLabel.opacity(1);
+      } else {
+        critLabel = critLabel.opacity(0);
+      }
+      // draw the diagram
+      draw(
+        diagram3,
+        sceneStatic,
+        normalLine,
+        incidentAnno,
+        refracAnno,
+        incidentRay.rotate(-incidentAngle),
+        refracRay.rotate(-refracAngle).opacity(transmittance),
+        reflecRay.rotate(incidentAngle).opacity(reflectance),
+        laserPointer.position(p).rotate(-incidentAngle),
+        tirAlert,
+        critLabel
+      );
+    };
+    interactive3.locator(
+      "p",
+      dg.V2(
+        -radius * Math.sin(dg.to_radian(41.81)),
+        -radius * Math.cos(dg.to_radian(41.81))
+      ),
+      0.05,
+      "blue",
+      glassTrack,
+      true
+    );
+    interactive3.draw();
+    interactive3.locator_initial_draw();
+    interactive3.draw();
+
+    // --------------------- diagram 4 ------------------------- //
+    let leftTrack = generateTrack(
+      0.7505 * Math.PI,
+      0.8995 * Math.PI,
+      60,
+      dg.to_radian(180),
+      0.18
+    );
+    let bg = dg
+      .rectangle(1.25, 0.6)
+      .fill("white")
+      .stroke("none")
+      .position(dg.V2(1.25 / 2 - 0.25, 0));
+    let fiber = dg
+      .rectangle(1, 0.1)
+      .stroke("none")
+      .fill("#aec7e866")
+      .position(dg.V2(0.5, 0));
+    let fiberBoundary1 = dg
+      .line(dg.V2(-0.5, 0), dg.V2(0.5, 0))
+      .strokewidth(1)
+      .stroke("black")
+      .position(dg.V2(0.5, 0.05));
+    let fiberBoundary2 = dg
+      .line(dg.V2(-0.5, 0), dg.V2(0.5, 0))
+      .strokewidth(1)
+      .stroke("black")
+      .position(dg.V2(0.5, -0.05));
+    let incidentRay1 = dg
+      .line(dg.V2(0, 0), dg.V2(0, -0.18))
+      .strokewidth(3)
+      .stroke("orange");
+    let reflecRay1 = dg
+      .arrow1(dg.V2(0, 0), dg.V2(0, -0.18), 0.02)
+      .strokewidth(3)
+      .stroke("orange")
+      .fill("orange");
+    let scene4Stactic = dg.diagram_combine(bg, fiber);
+    let diagram4 = document.getElementById("diagram4");
+    let control4 = document.getElementById("control4");
+    let interactive4 = new dg.Interactive(control4, diagram4);
+    interactive4.draw_function = (inp) => {
+      let p = inp["p"];
+      // snell's law calculation
+      let incidentAngle1 = Math.atan2(p.y, -p.x);
+      let refracAngle1 = Math.asin(
+        Math.sin(incidentAngle1) * (airRefracIndex / glassRefracIndex)
+      );
+      // fresnel calculation assuming laser light is S-polarized relative to the plane of incident
+      let reflectance = Math.pow(
+        (airRefracIndex * Math.cos(incidentAngle1) -
+          glassRefracIndex * Math.cos(refracAngle1)) /
+          (airRefracIndex * Math.cos(incidentAngle1) +
+            glassRefracIndex * Math.cos(refracAngle1)),
+        2
+      );
+      let transmittance = 1 - reflectance;
+      let reflecPoints = [dg.V2(0, 0)];
+      let xPos = -0.05 / Math.tan(refracAngle1);
+      let n = 1;
+      while (true) {
+        xPos += 0.1 / Math.tan(refracAngle1);
+        if (xPos >= 1) {
+          reflecPoints.push(
+            dg.V2(
+              1,
+              0.05 * Math.pow(-1, n - 1) +
+                (1 - (xPos - 1) / (0.1 / Math.tan(refracAngle1))) *
+                  0.1 *
+                  Math.pow(-1, n)
+            )
+          );
+          break;
+        }
+        reflecPoints.push(dg.V2(xPos, Math.pow(-1, n) * 0.048));
+        n++;
+      }
+      let confinedRay = dg
+        .curve(reflecPoints)
+        .strokewidth(3)
+        .stroke("orange")
+        .fill("orange")
+        .strokelinejoin("bevel");
+      // draw the diagram
+      draw(
+        diagram4,
+        scene4Stactic,
+        incidentRay1.rotate(1.5 * Math.PI - incidentAngle1),
+        confinedRay.opacity(transmittance),
+        fiberBoundary1,
+        fiberBoundary2,
+        reflecRay1.rotate(-0.5 * Math.PI + incidentAngle1).opacity(reflectance),
+        laserPointer.position(p).rotate(1.5 * Math.PI - incidentAngle1)
+      );
+    };
+    interactive4.locator(
+      "p",
+      dg.V2(
+        -0.18 * Math.sin(dg.to_radian(60)),
+        0.18 * Math.cos(dg.to_radian(60))
+      ),
+      0.05,
+      "blue",
+      leftTrack,
+      true
+    );
+    interactive4.draw();
+    interactive4.locator_initial_draw();
+    interactive4.draw();
+  </script>
+
+  <style>
+    body {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      font-family: mitr, sans-serif;
+      font-size: 1.2em;
+      text-align: center;
+      color: #2469a5;
+      margin: 20px;
+    }
+    h2 {
+      font-family: mitr, sans-serif;
+      font-size: 1em;
+      color: #2469a5;
+      margin-bottom: -10px;
+    }
+    h3 {
+      font-family: mitr, sans-serif;
+      font-size: 1em;
+      color: #464646;
+      text-align: center;
+    }
+    p {
+      font-family: mitr, sans-serif;
+      font-size: 1em;
+      color: #666666;
+    }
+    b {
+      color: #3a3a3a;
+    }
+    .box {
+      background-color: #ffffff;
+      max-width: 800px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .svg {
+      width: 100%;
+      aspect-ratio: 1;
+    }
+    .svgFiber {
+      width: 100%;
+      aspect-ratio: calc(1.25 / 0.6);
+    }
+    .control {
+      user-select: none;
+      touch-action: none;
+    }
+  </style>
+</html>
